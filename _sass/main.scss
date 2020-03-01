@@ -6,6 +6,7 @@ body {
   font-size: 1rem;
   color: #404040;
   line-height: 1.6;
+  background-color: ghostwhite;
 }
 
 .content {
@@ -36,12 +37,69 @@ a.current {
 }
 
 /* buttons */
+.nav-buttons {
+  display: inline-block;
+  background-color: ghostwhite;
+  padding: 0.2em 0.3em;
+}
 
+.btn-nav {
+  color: black;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 0.2em 0.6em;
+  border: none;
+}
+
+.btn-nav:hover {
+  background-color: grey;
+  color: ghostwhite;
+}
 
 /* ==================
     general layout
 ===================== */
 
+.top-landing-spacer {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1em;
+  background-color: #ececec;
+}
+
+.top-landing {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  -webkit-box-shadow: 3px 3px 5px 6px #ececec;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ececec;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ececec;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.top-landing-left {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+
+.top-landing-text {
+  width: 70%;
+}
+
+.top-landing-image {
+  width: 60%;
+}
+
+.all-posts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.posts-col1,
+.posts-col2,
+.posts-col3 {
+  width: 30%
+}
 
 /* navigation */
 header {
@@ -51,7 +109,7 @@ header {
 }
 
 nav a {
-  margin-left: 1em;
+  margin: 1em;
   padding: 1em;
 }
 
