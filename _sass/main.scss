@@ -101,6 +101,12 @@ a.current {
   width: 30%
 }
 
+.about {
+  margin: 0 auto;
+  max-width: 600px;
+  margin-bottom: 5em;
+}
+
 /* navigation */
 header {
   display: flex;
@@ -108,9 +114,19 @@ header {
   align-items: center;
 }
 
+nav {
+  display: flex;
+}
+
 nav a {
   margin: 1em;
   padding: 1em;
+}
+
+#cat-kat-pic {
+  max-width: 30px;
+  align-self: center;
+  margin: 1em 0em 1em 1em;
 }
 
 /* footer */
