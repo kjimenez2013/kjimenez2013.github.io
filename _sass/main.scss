@@ -5,6 +5,12 @@ $content-max-width: 700px;
   overflow-wrap: break-word;
 }
 
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -65,6 +71,12 @@ a.current {
 .btn-nav:hover {
   background-color: grey;
   color: ghostwhite;
+}
+
+#email-submit-btn {
+  background-color: white;
+  padding: 0.4em 1em;
+  font-style: italic;
 }
 
 /* ==================
@@ -216,3 +228,10 @@ nav a {
 }
 
 /* footer */
+.site-footer {
+  margin: 2rem 0 3rem 0;
+
+  p {
+    color: #a8a8a8;
+  };
+}
