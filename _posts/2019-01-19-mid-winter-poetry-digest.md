@@ -3,6 +3,7 @@ layout: post
 author: Kat
 image: poetry.jpeg
 title: Mid-Winter Poetry Digest
+tag: Thoughts
 ---
 *From time to time I will use the notes app on my iPhone as a place to store my thoughts and write some prose. This winter I became specially fond of the notes app and here are a few of the poems/prose I have written since late November.*
 

@@ -2,6 +2,7 @@
 layout: post
 author: Kat
 image: spirit_rock.jpeg
+tag: Wellness
 ---
 I spent this Thanksgiving eating vegetarian food in silence with strangers. I went on a 10 day silent meditation retreat at Spirit Rock Insight Meditation Center in Woodacre, California. 
 

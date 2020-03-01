@@ -1,6 +1,9 @@
 $content-max-width: 700px;
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
 
 body {
   margin: 0;
@@ -38,6 +41,14 @@ a.current {
   border-top: 2px solid currentColor;
 }
 
+.main-quote {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0 0 1.5em 0;
+  font-style: italic;
+  font-weight: bold;
+}
+
 /* buttons */
 .nav-buttons {
   display: inline-block;
@@ -63,7 +74,7 @@ a.current {
 ===================== */
 
 .top-landing {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .top-landing-spacer {
   margin: 0 auto;
@@ -99,22 +110,42 @@ a.current {
 .post {
   margin: 0 auto;
   max-width: $content-max-width;
+
+  a {
+    color: darkblue;
+
+    &:hover {
+      font-style: italic;
+    }
+  }
 }
 
-.all-posts {
+.post-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.excerpt {
-  font-style: none;
-}
-
 .posts-col-0,
 .posts-col-1,
 .posts-col-2 {
-  width: 30%;
+  max-width: 30%;
+
+  .post-card {
+    margin-bottom: 2.5em;
+  }
+
+  .excerpt {
+    font-style: none;
+
+    a {
+      color: darkblue;
+
+      &:hover {
+        font-style: italic;
+      }
+    }
+  }
 
   span {
     display: inline-block;
@@ -128,6 +159,12 @@ a.current {
   p {
     margin: 0;
   }
+
+  .post-card-info {
+    margin-top: 1em;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
 }
 
 .post-img {
@@ -138,6 +175,10 @@ a.current {
 
 .squish {
   margin: 0;
+}
+
+.line-break {
+  margin: 0 0 1em 0;
 }
 
 .tab {

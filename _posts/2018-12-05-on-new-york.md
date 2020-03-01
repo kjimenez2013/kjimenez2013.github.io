@@ -2,6 +2,7 @@
 layout: post
 author: Kat
 image: ny_bryant_park.png
+tag: Thoughts
 ---
 "But do you have manousheh in SF?" Michael asked as we sat down at a Korean dumpling place in Ktown.
 

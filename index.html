@@ -22,19 +22,60 @@ title: Kat
   <div class="top-landing-spacer"></div>
 </div>
 
-<section class="all-posts">
-  {% for post in site.posts %}
-    <div class="posts-col-{{ forloop.index | minus: 1 | modulo: 3 }}">
-      <a href="{{ post.url }}">
-        <span>
-          <img src="/assets/images/{{ post.image }}">
-          <h2>{{ post.title }}</h2>
-          <div>{{ post.excerpt }}</div>
-        </span>
-      </a>
-    </div>
-  {% endfor %}
-<!--  <p class="posts-col-1">Testing Testing Testing Testing Testing </p>-->
-<!--  <p class="posts-col-2">Testing Testing Testing Testing Testing </p>-->
-<!--  <p class="posts-col-3">Testing Testing Testing Testing Testing </p>-->
+<p class="main-quote">"Go confidently in the direction of your dreams" - Henry David Thoreau</p>
+
+<section class="post-cards">
+      <div class="posts-col-0">
+      {% for post in site.posts %}
+        {% assign modIdx = forloop.index | minus: 1 | modulo: 3 %}
+          {% if modIdx == 0 %}
+            <div class="post-card">
+              <a href="{{ post.url }}">
+                <span>
+                  <img src="/assets/images/{{ post.image }}">
+                  <p class="post-card-info">{{ post.tag }}{% if post.tag %} - {%endif%}{{ post.date | date_to_string }}</p>
+                  <h2>{{ post.title }}</h2>
+                  <p class="excerpt">{{ post.content | strip_html | truncatewords:50 }}</p>
+                </span>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="posts-col-1">
+      {% for post in site.posts %}
+        {% assign modIdx = forloop.index | minus: 1 | modulo: 3 %}
+          {% if modIdx == 1 %}
+            <div class="post-card">
+              <a href="{{ post.url }}">
+                <span>
+                  <img src="/assets/images/{{ post.image }}">
+                  <p class="post-card-info">{{ post.tag }}{% if post.tag %} - {%endif%}{{ post.date | date_to_string }}</p>
+                  <h2>{{ post.title }}</h2>
+                  <p class="excerpt">{{ post.content | strip_html | truncatewords:50 }}</p>
+                </span>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="posts-col-2">
+      {% for post in site.posts %}
+        {% assign modIdx = forloop.index | minus: 1 | modulo: 3 %}
+          {% if modIdx == 2 %}
+            <div class="post-card">
+              <a href="{{ post.url }}">
+                <span>
+                  <img src="/assets/images/{{ post.image }}">
+                  <p class="post-card-info">{{ post.tag }}{% if post.tag %} - {%endif%}{{ post.date | date_to_string }}</p>
+                  <h2>{{ post.title }}</h2>
+                  <p class="excerpt">{{ post.content | strip_html | truncatewords:50 }}</p>
+                </span>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
 </section>
