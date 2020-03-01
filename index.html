@@ -2,26 +2,39 @@
 layout: default
 title: Kat
 ---
-<div class="top-landing-spacer"></div>
-<section class="top-landing">
-  <div class="top-landing-left">
-    <div class="top-landing-text">
-      <p>2020-01-01 Placeholder</p>
-      <h1>My Cool Post</h1>
-      <p>My cool post description of hella cool things cuz I am Kat and I am a cool gal.</p>
-      <div class="nav-buttons">
-        <a id="previous" class="btn-nav"><</a>
-        <a id="next" class="btn-nav">></a>
+<div class="top-landing">
+  <div class="top-landing-spacer"></div>
+  <section class="top-landing-content">
+    <div class="top-landing-left">
+      <div class="top-landing-text">
+        <p>2020-01-01 Placeholder</p>
+        <h1>My Cool Post</h1>
+        <p>My cool post description of hella cool things cuz I am Kat and I am a cool gal.</p>
+        <div class="nav-buttons">
+          <a id="previous" class="btn-nav"><</a>
+          <a id="next" class="btn-nav">></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <img class="top-landing-image" src="/assets/images/kat_desert.png">
-</section>
-<div class="top-landing-spacer"></div>
+    <img class="top-landing-image" src="/assets/images/kat_desert.png">
+  </section>
+  <div class="top-landing-spacer"></div>
+</div>
 
 <section class="all-posts">
-  <p class="posts-col1">Testing Testing Testing Testing Testing </p>
-  <p class="posts-col2">Testing Testing Testing Testing Testing </p>
-  <p class="posts-col3">Testing Testing Testing Testing Testing </p>
+  {% for post in site.posts %}
+    <div class="posts-col-{{ forloop.index | minus: 1 | modulo: 3 }}">
+      <a href="{{ post.url }}">
+        <span>
+          <img src="/assets/images/{{ post.image }}">
+          <h2>{{ post.title }}</h2>
+          <div>{{ post.excerpt }}</div>
+        </span>
+      </a>
+    </div>
+  {% endfor %}
+<!--  <p class="posts-col-1">Testing Testing Testing Testing Testing </p>-->
+<!--  <p class="posts-col-2">Testing Testing Testing Testing Testing </p>-->
+<!--  <p class="posts-col-3">Testing Testing Testing Testing Testing </p>-->
 </section>
