@@ -1,6 +1,6 @@
-<header>
+<nav>
   <a href="/"><h1>Katerine Jimenez</h1></a>
-  <nav>
+  <div id="unnested-nav">
     {% for item in site.data.navigation %}
       <a
         href="{{ item.link }}"
@@ -10,5 +10,19 @@
       >{{ item.name }}</a>
     {% endfor %}
     <img id="cat-kat-pic" src="/assets/images/cat_kat.png">
-  </nav>
-</header>
+  </div>
+
+<!--  <div id="nested-nav">-->
+<!--    <select onchange="location = this.value;">-->
+<!--      {% for item in site.data.navigation %}-->
+<!--        <option-->
+<!--          value="{{ item.link }}"-->
+<!--          {% if page.url == item.link %}-->
+<!--            selected="selected"-->
+<!--          {% endif %}-->
+<!--        >{{ item.name }}</option>-->
+<!--      {% endfor %}-->
+<!--    </select>-->
+<!--  </div>-->
+
+</nav>
