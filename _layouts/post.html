@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post">
-  <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+  <p style="font-style:italic;">{{ page.date | date_to_string }}</p>
   <h2>{{ page.title }}</h2>
   <img class="post-img" src="/assets/images/{{ page.image }}">
   {{ content }}
