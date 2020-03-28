@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Kat
-image: bubbles.png
+image: bubble.png
 tag: Thoughts
 ---
 
